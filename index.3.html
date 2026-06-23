@@ -1,287 +1,412 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="IMG/icon.png">
-    <link rel="stylesheet" href="CSS/style.3.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Run World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run World — Corridas</title>
+  <link rel="shortcut icon" href="IMG/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html"><i class="material-icons" title="Home">home</i></a></li>
-                <li><a href="index.2.html"><i class="material-icons" title="Marcas">shop</i></a></li>
-                <li><a href="index.3.html"><i class="material-icons" title="Run">directions_run</i></a></li>
-            </ul>
-        </nav>
-        <div class="header-logo">
-            <a href="index.html"><img src="IMG/Logo.jpg" alt="logo" class="header-logo"></a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="IMG/Logo.jpg" alt="Run World">
+      <span class="logo-text">RUN<span>WORLD</span></span>
+    </a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.2.html">Loja</a></li>
+        <li><a href="index.3.html" class="active">Corridas</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search-form" action="#" onsubmit="return false">
+        <input type="text" placeholder="Buscar corridas..." aria-label="Buscar">
+        <button type="submit" aria-label="Buscar">&#128269;</button>
+      </form>
+      <a href="#" class="icon-btn" aria-label="Wishlist">&#9825;</a>
+      <a href="index.2.html" class="icon-btn" aria-label="Carrinho">
+        &#128722;
+        <span class="cart-count" style="display:none">0</span>
+      </a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Navegação mobile">
+  <a href="index.html">&#127968; Início</a>
+  <a href="index.2.html">&#128722; Loja</a>
+  <a href="index.3.html" class="active">&#127939; Corridas</a>
+</nav>
+
+<main>
+
+  <!-- RACES HERO -->
+  <section class="races-hero">
+    <div class="races-hero-bg"></div>
+    <div class="races-hero-content">
+      <h1>Principais Provas do Mundo</h1>
+      <p>Das Six Majors às corridas brasileiras — tudo o que você precisa saber para correr.</p>
+    </div>
+  </section>
+
+  <!-- RACE CAROUSEL -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <h2>Six World Marathon Majors</h2>
+          <p>As seis maiores maratonas do mundo</p>
         </div>
-        <div class="header-search">
-            <form action="/search" method="GET">
-                <input type="text" name="q" placeholder="Pesquisar..." class="search-input">
-                <button type="submit" class="search-button">🔍</button>
-            </form>
-        </div>
-    </header>
-    <h1><i>Principais Provas do Mundo</i></h1>
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="slides">
-                <!-- Slide 1 -->
-                <div class="slide">
-                    <a href="https://www.baa.org/races/boston-marathon/enter/registration" target="_blank"><img src="IMG/maratonaboston.png" alt="Maratona de Boston"></a>
-                    <div class="info">
-                        <h3>Maratona de Boston</h3>
-                        <p>A mais antiga e</br>
-                             prestigiosa maratona do mundo.</p>
-                        <p>Clique na imagem e confira as inscrições.</p>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                    <a href="https://www.bmw-berlin-marathon.com/en/registration/registration-information" target="_blank"><img src="IMG/marotonaberlim.png" alt="Maratona de Berlim"></a>
-                    <div class="info"></a>
-                        <h3>Maratona de Berlim</h3>
-                        <p>Conhecida por seus recordes mundiais.</p>
-                        <p>Clique na imagem e confira as inscrições.</p>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                    <a href="https://www.nyrr.org/tcsnycmarathon/runners/entry/2025" target="_blank"><img src="IMG/maratonanewyork.avif" alt="Maratona de Nova York"></a>
-                    <div class="info">
-                        <h3>Maratona de Nova York</h3>
-                        <p>Uma das maiores maratonas do mundo.</p>
-                        <p>Clique na imagem e confira as inscrições.</p>
-                    </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="slide">
-                    <a href="https://www.finishers.com/pt/evento/maratona-de-londres" target="_blank"><img src="IMG/CAPA_logo_Londres-25.png" alt="london"></a>
-                <div class="info">
-                    <h3>Maratona de Londres</h3>
-                    <p>A Maratona de Londres é reconhecida</br> 
-                    por seu ambiente festivo.</p>
-                    <p>Clique na imagem e confira as inscrições.</p>
-                </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="slide">
-                <a href="https://maratonadeportoalegre.com.br/" target="_blank"><img src="IMG/POA.png" alt="POA"></a>
-            <div class="info">
-                <h3>Maratona de Porto Alegre</h3>
-                <p>Uma das maratonas mais pretigidas do Brasil.</p>
-                <p>Clique na imagem e confira as inscrições.</p>
+      </div>
+
+      <div class="race-carousel">
+        <div class="carousel-track-wrap">
+          <div class="carousel-track">
+
+            <div class="carousel-slide">
+              <img src="IMG/maratonaboston.png" alt="Maratona de Boston">
+              <div class="slide-info">
+                <h3>Maratona de Boston</h3>
+                <p>A mais antiga e prestigiosa maratona do mundo, realizada desde 1897.</p>
+                <a href="https://www.baa.org/races/boston-marathon" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
               </div>
             </div>
-            <!-- Slide 6 -->
-            <div class="slide">
-                <a href="https://www.marathon.tokyo/en/about/outline/" target="_blank"><img src="IMG/tokyoM.png" alt="tokyo"></a>
-            <div class="info">
-                <h3>Maratona de Tokyo</h3>
-                <p>É uma das maratonas mais</br>
-                    prestigiadas do mundo.</p>
-                <p>Clique na imagem e confira as inscrições.</p>
-             </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/marotonaberlim.png" alt="Maratona de Berlim">
+              <div class="slide-info">
+                <h3>Maratona de Berlim</h3>
+                <p>Conhecida pelos recordes mundiais e pelo traçado rápido pelas ruas históricas da capital alemã.</p>
+                <a href="https://www.bmw-berlin-marathon.com/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
             </div>
-            <!-- Slide 7 -->
-            <div class="slide">
-               <a href="https://www.chicagomarathon.com/" target="_blank"><img src="IMG/Logo_Chicago-25-171x300.png" alt="chicago"></a>
-            <div class="info">
+
+            <div class="carousel-slide">
+              <img src="IMG/maratonanewyork.avif" alt="Maratona de Nova York">
+              <div class="slide-info">
+                <h3>Maratona de Nova York</h3>
+                <p>Uma das maiores maratonas do mundo, com mais de 50 mil participantes pelos cinco bairros de NY.</p>
+                <a href="https://www.nyrr.org/tcsnycmarathon" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/CAPA_logo_Londres-25.png" alt="Maratona de Londres">
+              <div class="slide-info">
+                <h3>Maratona de Londres</h3>
+                <p>Reconhecida pelo ambiente festivo e pelo percurso histórico que passa pelos maiores pontos turísticos da cidade.</p>
+                <a href="https://www.tcslondonmarathon.com/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/tokyoM.png" alt="Maratona de Tóquio">
+              <div class="slide-info">
+                <h3>Maratona de Tóquio</h3>
+                <p>Uma das maratonas mais organizadas do mundo, parte das Six Majors desde 2013.</p>
+                <a href="https://www.marathon.tokyo/en/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/Logo_Chicago-25-171x300.png" alt="Maratona de Chicago">
+              <div class="slide-info">
                 <h3>Maratona de Chicago</h3>
-                <p>A Maratona de Chicago</br>
-                oficialmente uma das Six majors.</p>
-                <p>Clique na imagem e confira as inscrições.</p>
+                <p>Traçado plano e rápido, ideal para bater recordes pessoais. Oficialmente uma das Six World Marathon Majors.</p>
+                <a href="https://www.chicagomarathon.com/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
             </div>
-           </div>
-          <!-- Slide 8 -->
-           <div class="slide">
-             <a href="https://www.saosilvestre.com.br/" target="_blank"><img src="IMG/Sao_Silvestre_Logo_420x.webp" alt="saosilvestre"></a>
-             <div class="info">
-                <h3>São Silvestre</h3>
-                <p>Uma das Corrida de rua</br>
-                 mais famosa do mundo</br>
-                 realizada no ultimo dia do ano no Brasil.</p>
-                <p>Clique na imagem e confira as inscrições.</p>
-             </div>
+
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Próximo">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRASIL SECTION -->
+  <section class="section section-gray">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <h2>Corridas no Brasil</h2>
+          <p>As provas mais importantes do cenário nacional</p>
+        </div>
+      </div>
+      <div class="race-carousel">
+        <div class="carousel-track-wrap">
+          <div class="carousel-track">
+
+            <div class="carousel-slide">
+              <img src="IMG/POA.png" alt="Maratona de Porto Alegre">
+              <div class="slide-info">
+                <h3>Maratona de Porto Alegre</h3>
+                <p>Uma das maratonas mais prestigiadas do Brasil, percorrendo os pontos icônicos da capital gaúcha.</p>
+                <a href="https://maratonadeportoalegre.com.br/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
             </div>
-            <!-- Slide 9-->
-             <div class="slide">
-                <a href="https://maratonadorio.com.br/" target="_blank"><img src="IMG/Maratonario.jpg" alt="maratonaRIO"></a>
-              <div class="info">
-                 <h3>Maratona do Rio</h3>
-                 <p>Uma das maiores maratonas do Brasil</p>
-                 <p>Clique na imagem e confira as inscrições.</p>
-              </div> 
-             </div>
-           </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/Sao_Silvestre_Logo_420x.webp" alt="São Silvestre">
+              <div class="slide-info">
+                <h3>Corrida Internacional São Silvestre</h3>
+                <p>Uma das corridas de rua mais famosas do mundo, realizada no último dia do ano em São Paulo desde 1925.</p>
+                <a href="https://www.saosilvestre.com.br/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="IMG/Maratonario.jpg" alt="Maratona do Rio">
+              <div class="slide-info">
+                <h3>Maratona do Rio de Janeiro</h3>
+                <p>Uma das maiores maratonas do Brasil, com um percurso deslumbrante às margens das praias cariocas.</p>
+                <a href="https://maratonadorio.com.br/" target="_blank" rel="noopener" class="race-cta">Inscrições &#8594;</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
+        <button class="carousel-btn next" aria-label="Próximo">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECORDISTAS -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <h2>Recordistas das Maratonas</h2>
+          <p>Os atletas que fizeram história</p>
+        </div>
+      </div>
+      <div class="records-grid">
+
+        <div class="record-card fade-up">
+          <img src="IMG/marotonaberlim.png" alt="Berlim" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/NikeKipchong.jpg" alt="Eliud Kipchoge" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Berlim</div>
+            <div class="record-name">Eliud Kipchoge</div>
+            <div class="record-time">2h01min09s</div>
           </div>
         </div>
 
+        <div class="record-card fade-up">
+          <img src="IMG/CAPA_logo_Londres-25.png" alt="Londres" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/NikeKipchong.jpg" alt="Eliud Kipchoge" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Londres</div>
+            <div class="record-name">Eliud Kipchoge</div>
+            <div class="record-time">2h02min37s</div>
+          </div>
+        </div>
 
-        <!---------------- Recordistas -------------------->
-        <div class="container">
-        <div class="winner-row">
-            <h1>Recordistas das Principais Maratonas</h1>
-        <div class="winner-card">
-            <img src="IMG/marotonaberlim.png" alt="Berlim">
-            <h2>Maratona de Berlim</h2>
-            <img src="IMG/Kipchoge2.jpg" alt="Kipchong">
-            <div class="winner-info">
-                 <h3>Recorditas</h3>
-                 <p>Eliud Kipchong , Tempo: 2h01min09s</p>
+        <div class="record-card fade-up">
+          <img src="IMG/Logo_Chicago-25-171x300.png" alt="Chicago" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/adrunning.jpeg" alt="Kelvin Kiptum" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Chicago</div>
+            <div class="record-name">Kelvin Kiptum</div>
+            <div class="record-time">2h00min35s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/maratonanewyork.avif" alt="Nova York" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/asicsrunning.avif" alt="Tamirat Tola" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Nova York</div>
+            <div class="record-name">Tamirat Tola</div>
+            <div class="record-time">2h04min58s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/maratonaboston.png" alt="Boston" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/olirunning.jpg" alt="Evans Chebet" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Boston</div>
+            <div class="record-name">Evans Chebet</div>
+            <div class="record-time">2h05min54s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/tokyoM.png" alt="Tóquio" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/adrunning.jpeg" alt="Benson Kipruto" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Tóquio</div>
+            <div class="record-name">Benson Kipruto</div>
+            <div class="record-time">2h02min16s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/POA.png" alt="Porto Alegre" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/olirunning.jpg" alt="Maxwell Rotich" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Porto Alegre</div>
+            <div class="record-name">Maxwell Rotich</div>
+            <div class="record-time">2h18min55s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/Sao_Silvestre_Logo_420x.webp" alt="São Silvestre" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/asicsrunning.avif" alt="Kibwott Kandie" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">São Silvestre</div>
+            <div class="record-name">Kibwott Kandie</div>
+            <div class="record-time">42min59s</div>
+          </div>
+        </div>
+
+        <div class="record-card fade-up">
+          <img src="IMG/Maratonario.jpg" alt="Rio" class="record-race-logo">
+          <div class="record-gold-line"></div>
+          <img src="IMG/NikeKipchong.jpg" alt="Josphat Kiprotich" class="record-runner-photo">
+          <div class="record-info">
+            <div class="record-race-label">Rio de Janeiro</div>
+            <div class="record-name">Josphat Kiprotich</div>
+            <div class="record-time">2h12min35s</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section class="section section-dark">
+    <div class="section-inner">
+      <div class="section-head" style="margin-bottom:28px;">
+        <div>
+          <h2 style="color:var(--white);">Ferramentas do Corredor</h2>
+          <p style="color:rgba(255,255,255,0.5);">Plataformas essenciais para organizar sua corrida</p>
+        </div>
+      </div>
+      <div class="apps-grid">
+
+        <div class="app-card ticket fade-up">
+          <div class="app-header">
+            <img src="IMG/Logo.jpg" alt="Ticket Sports">
+            <div class="app-header-text">
+              <div class="app-name">Ticket Sports</div>
+              <div class="app-tag">Inscrições em provas</div>
             </div>
+          </div>
+          <div class="app-body">
+            <p>Encontre e se inscreva nas principais provas de corrida do Brasil. Maratonas, meia-maratonas, corridas de rua e trail — tudo em um só lugar com compra segura de kit e chip.</p>
+            <a href="https://www.ticketsports.com.br" target="_blank" rel="noopener" class="app-link">Acessar Ticket Sports &#8594;</a>
+          </div>
         </div>
 
-        <div class="winner-card">
-            <img src="IMG/CAPA_logo_Londres-25.png" alt="Londres">
-            <h2>Maratona de Londres</h2>
-             <img src="IMG/NikeKipchong.jpg" alt="Kipchong">
-             <div class="winner-info">
-                 <h3>Recorditas</h3>
-                 <p>Eliud Kipchong , Tempo: 2h02min37s</p>
-             </div>
-        </div>
-
-        <div class="winner-card">
-            <img src="IMG/tokyoM.png" alt="tokyo">
-            <h2>Maratona de Tokyo</h2>
-            <img src="IMG/Benson.jpg" alt="benson">
-            <div class="winner-info">
-                <h3>Recordista</h3>
-                <p>Benson Kipruto , Tempo: 2h02min16s</p>
+        <div class="app-card strava fade-up">
+          <div class="app-header">
+            <img src="IMG/Logo.jpg" alt="Strava">
+            <div class="app-header-text">
+              <div class="app-name">Strava</div>
+              <div class="app-tag">Registro de treinos</div>
             </div>
+          </div>
+          <div class="app-body">
+            <p>Registre seus treinos, acompanhe amigos, corra em segmentos e desafie a comunidade global de corredores. O GPS mais usado entre atletas amadores e profissionais.</p>
+            <a href="https://www.strava.com/" target="_blank" rel="noopener" class="app-link">Acessar Strava &#8594;</a>
+          </div>
         </div>
 
-        <div class="winner-card">
-            <img src="IMG/POA.png" alt="POA">
-            <h2>Maratona de Porto Alegre</h2>
-            <img src="IMG/maxwell.webp" alt="maxwell">
-            <div class="winner-info">
-                <h3>Recordista</h3>
-                <p>Maxwell Rotich , Tempo: 2h18min55s</p>
-            </div>
-        </div>
-
-        <div class="winner-card">
-           <img src="IMG/maratonaboston.png" alt="Boston">
-           <h2>Maratona de Boston</h2>
-           <img src="IMG/evansadidas.jpg_large" alt="evans">
-        <div class="winner-info">
-            <h3>Recordista</h3>
-            <p>Evans Chebet , Tempo: 2h05min54s</p>
-        </div>
-        </div>
-
-        <div class="winner-card">
-            <img src="IMG/maratonanewyork.avif" alt="novayork">
-            <h2>Maratona de Nova York</h2>
-            <img src="IMG/tamirat.jpg" alt="tamirat">
-        <div class="winner-info">
-            <h3>Recordista</h3>
-            <p>Tamirat Tola , Tempo: 2h04min58s</p>
-           </div>
-        </div>
-
-        <div class="winner-card">
-            <img src="IMG/Sao_Silvestre_Logo_420x.webp" alt="saosilvestre">
-            <h2>São Silvestre</h2>
-            <img src="IMG/Kibwoot.webp" alt="Kibwoot">
-        <div class="winner-info">
-           <h3>Recordista</h3>
-           <p>Kibwoot Kandie , Tempo: 42min59s</p>
-        </div>
-        </div>
-        
-        <div class="winner-card">
-          <img src="IMG/Logo_Chicago-25-171x300.png" alt="chicago">
-          <h2>Maratona de Chicago</h2>
-          <img src="IMG/Kelvin-Kiptum-Foto-da-EuroNews.jpg" alt="Kelvinkiptum">
-        <div class="winner-info">
-            <h3>Recordista</h3>
-            <p>Kevin Kiptum , Tempo: 2h00min35s</p>
-        </div>
-        </div>
-
-    <div class="winner-card">
-     <img src="IMG/Maratonario.jpg" alt="maratona rio">
-     <h2>Maratona do Rio</h2>
-     <img src="IMG/josphat.jpg" alt="josphat">
-     <div class="winner-info">
-        <h3>Recordista</h3>
-        <p>Josphat Kiprotich , Tempo: 2h12min35s</p>
+      </div>
     </div>
-    </div>
-    </div> 
-</div>
+  </section>
 
-<!------------------- Sites ------------------->
-<h1><i>Provas</i></h1>
-<div class="ticket-card">
-    <img src="IMG/ticket-sports.webp" alt="Logo Ticket Sports" class="ticket-logo">
-    <div class="ticket-content">
-        <h1>Ticket Sports</h1>
-        <p>
-            Confira abaixo o <strong>Ticket Sports</strong>, onde você, corredor(a),<br>
-            pode fazer sua inscrição em diversas provas.<br>
-            Clique no card e descubra as várias opções que ele oferece!
-        </p>
-        <a href="https://www.ticketsports.com.br" target="_blank" class="ticket-button">
-            Ver provas disponíveis
-        </a>
+  <!-- PROMO BANNER -->
+  <section class="section section-white">
+    <div class="section-inner">
+      <div class="promo-banner fade-up">
+        <div>
+          <div class="promo-label">Run World — Loja</div>
+          <div class="promo-title">Equipe-se para<br>sua próxima prova.</div>
+          <div class="promo-sub">Encontre o tênis certo para cada desafio na nossa loja.</div>
+        </div>
+        <a href="index.2.html" class="btn btn-primary">Ver Loja &#8594;</a>
+      </div>
     </div>
-</div>
-<h1><i>Treinos</i></h1>
-<div class="strava-card">
-    <img src="IMG/strava.webp" alt="Logo Strava" class="strava-logo">
-    <div class="strava-content">
-    <h1>Strava</h1>
-    <p>
-        Confira abaixo <strong>Strava</strong>, onde você, corredor(a),<br>
-        Pode fazer e ver os seus treinos feitos e de seus amigos.
-        O app oferece tudo isso e como muito mais,
-        Clique no card e descubra as várias opções que ele oferce!
-    </p>
-       <a href="https://www.strava.com/?hl=pt-BR" target="_blank" class="strava-button">
-          Ver meus treinos
-       </a>
-    </div>
-</div>
+  </section>
 
-<!------------------ Footer ------------------>
-<footer>
-    <div class="links">
-        <h2>Marcas</h2>
-        <p><a href="https://www.nike.com.br/" target="_blank">Nike</a></p>
-        <p><a href="https://www.olympikus.com.br/" target="_blank">Olimpikus</a></p>
-        <p><a href="https://www.newbalance.com.br/" target="_blank">New Balance</a></p>
-        <p><a href="https://www.adidas.com.br/" target="_blank">Adidas</a></p>
-        <p><a href="https://www.on.com/" target="_blank">On</a></p>
-        <p><a href="https://www.asics.com.br/" target="_blank">Asics</a></p>
-    </div>
-    <div class="links2">
-       <h2>Linhas</h2>
-       <p><a href="https://www.olympikus.com.br/" target="_blank">Olympikus Run</a></p>
-       <p><a href="https://www.nike.com.br/" target="_blank">Nike Run</a></p>
-       <p><a href="https://www.newbalance.com.br/">New Balance Run</a></p>
-       <p><a href="https://www.adidas.com.br/">Adidas Running</a></p>
-       <p><a href="https://www.on.com/">On Running</a></p>
-       <p><a href="https://www.asics.com.br/">Asics Run</a></p>  
-    </div>
-       <div class="imgr">
-          <img src="IMG/Logo.jpg" alt="logo">
-          <h2>Nosso Grupo Run World , criou este site para consulta de todos os corredores , 
-            podem entrar e acessar os site de suas marcas preferidas , como Nike , Olimpikus , Adidas e 
-            entre outros , Acesse e curta o mundo da corrida.
-          </h2>
-       </div>
-      <p>&copy; Run World | Diretos ao Grupo Run World</p>
-    </footer>
+</main>
 
-    <script src="JS/script.3.js"></script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="IMG/Logo.jpg" alt="Run World">
+      <div class="footer-brand-name">RUN<span>WORLD</span></div>
+      <p class="footer-brand-desc">A plataforma definitiva para corredores. Explore marcas, tecnologias, atletas e as maiores provas do mundo.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Strava">ST</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Marcas</h4>
+      <ul>
+        <li><a href="https://www.olympikus.com.br/" target="_blank" rel="noopener">Olympikus</a></li>
+        <li><a href="https://www.adidas.com.br/" target="_blank" rel="noopener">Adidas</a></li>
+        <li><a href="https://www.asics.com.br/" target="_blank" rel="noopener">Asics</a></li>
+        <li><a href="https://www.nike.com.br/" target="_blank" rel="noopener">Nike</a></li>
+        <li><a href="https://www.newbalance.com.br/" target="_blank" rel="noopener">New Balance</a></li>
+        <li><a href="https://www.on.com/" target="_blank" rel="noopener">On Running</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <ul>
+        <li><a href="index.2.html">Todos os Tênis</a></li>
+        <li><a href="index.2.html">Treino Diário</a></li>
+        <li><a href="index.2.html">Velocidade</a></li>
+        <li><a href="index.2.html">Elite / Maratona</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Corridas</h4>
+      <ul>
+        <li><a href="index.3.html">Six Majors</a></li>
+        <li><a href="index.3.html">Brasil</a></li>
+        <li><a href="index.3.html">Recordistas</a></li>
+        <li><a href="index.3.html">Ticket Sports</a></li>
+        <li><a href="index.3.html">Strava</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Run World &mdash; Todos os direitos reservados.</span>
+    <span>Projeto de portfólio &mdash; Cauã Proença</span>
+  </div>
+</footer>
+
+<script src="JS/main.js"></script>
 </body>
 </html>

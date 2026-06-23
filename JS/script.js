@@ -1,36 +1,61 @@
-const slides = document.querySelectorAll('.slide');
-const indicators = document.querySelectorAll('.progress-bar .indicator');
-let currentSlide = 0;
+document.addEventListener("DOMContentLoaded", function () {
 
-// Atualiza o carrossel e os indicadores
-function updateCarousel() {
+    // ── Carousel ──
     const slidesContainer = document.querySelector('.slides');
-    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    if (slidesContainer) {
+        const slides = slidesContainer.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+        let current = 0;
 
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentSlide);
-    });
-}
-
-// Intervalo para trocar slides automaticamente
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateCarousel();
-}, 3000); // Troca a cada 3 segundos
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll(".brand-images img");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
+        // Build indicators
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goTo(i));
+            indicatorsContainer.appendChild(dot);
         });
 
-        images.forEach((img) => observer.observe(img));
-    });
+        function goTo(index) {
+            current = (index + slides.length) % slides.length;
+            slidesContainer.style.transform = `translateX(-${current * 100}%)`;
+            document.querySelectorAll('.carousel-indicators .dot').forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+            });
+        }
 
+        prevBtn && prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn && nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Auto-advance
+        let timer = setInterval(() => goTo(current + 1), 4000);
+        const wrapper = document.querySelector('.slides-wrapper');
+        wrapper && wrapper.addEventListener('mouseenter', () => clearInterval(timer));
+        wrapper && wrapper.addEventListener('mouseleave', () => {
+            timer = setInterval(() => goTo(current + 1), 4000);
+        });
+    }
+
+    // ── Brand images fade-in on scroll ──
+    const fadeImages = document.querySelectorAll('.brand-highlights .image-container img');
+    if (fadeImages.length) {
+        fadeImages.forEach(img => {
+            img.style.opacity = '0';
+            img.style.transform = 'translateY(30px)';
+            img.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        fadeImages.forEach(img => observer.observe(img));
+    }
+
+});
